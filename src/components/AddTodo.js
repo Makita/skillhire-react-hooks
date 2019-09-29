@@ -7,7 +7,7 @@ export default function AddTodo(props) {
     e.preventDefault();
 
     if (e.which === 13) {
-      const lastId = props.todos[props.todos.length - 1].id || 1;
+      const lastId = props.todos.length ? props.todos[props.todos.length - 1].id : 1;
 
       props.setTodos([...props.todos, { id: lastId + 1, task: inputValue, completed: false }]);
       changeValue('');
