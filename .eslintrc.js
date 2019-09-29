@@ -25,6 +25,7 @@ module.exports = {
     "react/jsx-filename-extension": "off",
     "react/jsx-one-expression-per-line": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "arrow-body-style": "off",
   },
 };

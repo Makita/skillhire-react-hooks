@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Container from '@material-ui/core/Container';
+import List from '@material-ui/core/List';
+
+import Todos from './components/Todos';
+import AddTodo from './components/AddTodo';
 
 function App() {
+  const [todos, setTodos] = useState([
+    {
+      id: 1,
+      task: 'Do shit',
+      completed: false,
+    },
+  ]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <List component="Todos">
+          <Todos todos={todos} setTodos={setTodos} />
+        </List>
+        <AddTodo todos={todos} setTodos={setTodos} />
+      </Container>
     </div>
   );
 }
