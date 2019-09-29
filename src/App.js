@@ -6,13 +6,7 @@ import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
 
 function App() {
-  const [todos, setTodos] = useState([
-    {
-      id: 1,
-      task: 'Do shit',
-      completed: false,
-    },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   return (
     <div className="App">
